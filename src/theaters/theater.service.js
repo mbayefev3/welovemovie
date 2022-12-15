@@ -10,6 +10,9 @@ const db = require("../db/connection")
 
 async function listMoviesInEachTheaters() {
 
+    // why i get duplicate vaules question to ask my mentor ***********
+    // why in reviews update not returning the updated value
+
     const theaters = await db("theaters").select("*")
 
     const movies = await db("theaters as t").join("movies_theaters as mt", "t.theater_id", "mt.theater_id").join("movies as m", "mt.movie_id", "m.movie_id").distinct("m.*", "mt.*")

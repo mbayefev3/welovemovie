@@ -4,6 +4,10 @@ const moviesRoute = require("./movies/movies.route")
 const reviewsRoute = require("./reviews/reviews.route")
 const theatersRoute = require("./theaters/theater.route")
 const app = express();
+const cors = require("cors");
+
+
+app.use(cors());
 app.use(express.json())
 
 app.use("/movies", moviesRoute)

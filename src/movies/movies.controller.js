@@ -35,10 +35,7 @@ async function movieIdExists(req, res, next) {
     })
 
 
-    // "error": "Movie cannot be found."
-    // res.status(404).send({
-    //     error: `cannot access route with given id ${movie}`
-    // })
+
 }
 
 
