@@ -7,7 +7,6 @@ async function reviewIdExists(req, res, next) {
 
     if (review) {
         res.locals.review = review
-        console.log('r', res.locals.reviews)
         return next()
     }
 
